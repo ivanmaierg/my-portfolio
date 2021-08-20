@@ -10,7 +10,7 @@ const Header = () => {
             <Div1>
                 <Link href="/" style="margin:auto">
                     <a style={{ display: 'flex', alignItems: 'center', color: "white" }}>
-                        <DiCssdeck size="3rem" /> <span>Portfolio</span>
+                        <span>Imaierg</span>
                     </a>
                 </Link>
             </Div1>

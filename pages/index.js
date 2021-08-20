@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import CallToAction from '../components/CallToAction/CallToAction'
 import Header from '../components/Header/Header'
 import { Layout } from '../layout/Layout'
 
@@ -12,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        
+        <CallToAction />
       </Layout>
     </>
   )

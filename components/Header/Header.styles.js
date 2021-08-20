@@ -1,22 +1,21 @@
 import { IoIosArrowDropdown } from 'react-icons/io';
 import styled from 'styled-components';
 
-
-
 export const Container = styled.div`
     display:grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(6,1fr);
     grid-template-rows:1fr;
     grid-column-gap:2rem;
-    padding: 1rem;
+    padding: 2rem 1rem auto  1rem;
     padding-top:2rem;
-
+    margin-bottom:20vh;
     @media ${(props) => props.theme.breakpoints.sm}{
         display:grid;
-        grid-template-columns:repeat(5,1fr);
-        grid-template-rows: repreat(2,60px);
+        grid-template-columns:repeat(4,1fr);
+        grid-template-rows: repeat(2,60px);
         grid-column-gap:0.5rem;
         grid-row-gap:0.5rem;
+        margin-bottom:10vh;
     }
 `;
 
@@ -25,14 +24,15 @@ export const Div1 = styled.div`
     display: flex;
     flex-direction: row;
     align-content: center;
+    justify-content:flex-start;
     @media ${(props) => props.theme.breakpoints.sm}{
-        grid-area: 1/1/ 2/3;
+        grid-area: 1 / 1 / 2 /2;
     }
 `;
 
 export const Div2 = styled.nav`
-    padding: 0.5rem;
-    grid-area: 1 / 2 / 2 / 4;
+    padding: 0 2rem;
+    grid-area: 1 / 2 / 2 / 6;
     display: flex;
     justify-content: space-around;
     li{
@@ -40,20 +40,20 @@ export const Div2 = styled.nav`
         margin: auto;
     }
     @media ${(props) => props.theme.breakpoints.sm} {
-        grid-area: 2 / 2 / 4 / 5;
+        grid-area: 2 / 1 / 2 / 6;
         li{
             margin:0 0.5rem;
         }
     }
 `;
 export const Div3 = styled.div`
-    grid-area: 1 / 5 / 2 / 6;
+    grid-area: 1 / 6 / 2 / 6;
     display: flex;
     justify-content: space-around;
     align-items: center;
     @media ${(props) => props.theme.breakpoints.sm} {
     align-items: center;
-    grid-area: 1 / 4 / 2 / 6;
+    grid-area: 1 / 5 / 2 / 6;
 }
 `;
 
@@ -89,6 +89,7 @@ export const NavLink = styled.a`
         opacity: 1;
         cursor: pointer;
         color:#ffff;
+        font-weight: 800;
     }
     @media ${(props => props.theme.breakpoints.sm)}{
         padding: 0.5rem;
