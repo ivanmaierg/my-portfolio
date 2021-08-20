@@ -8,14 +8,14 @@ export const Container = styled.div`
     grid-column-gap:2rem;
     padding: 2rem 1rem auto  1rem;
     padding-top:2rem;
-    margin-bottom:20vh;
+    margin-bottom:10rem;
     @media ${(props) => props.theme.breakpoints.sm}{
         display:grid;
         grid-template-columns:repeat(4,1fr);
         grid-template-rows: repeat(2,60px);
         grid-column-gap:0.5rem;
         grid-row-gap:0.5rem;
-        margin-bottom:10vh;
+        margin-bottom:7vh;
     }
 `;
 
@@ -31,10 +31,10 @@ export const Div1 = styled.div`
 `;
 
 export const Div2 = styled.nav`
-    padding: 0 2rem;
     grid-area: 1 / 2 / 2 / 6;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     li{
         list-style: none;
         margin: auto;
@@ -96,9 +96,13 @@ export const NavLink = styled.a`
     }
 `
 export const SocialIcons = styled.a`
-    display: block;
-    padding:0.8rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding:0.7rem;
     border-radius:50%;
+    height:40px;
+    width:40px;
     transition: 0.4s ease;
     &:hover{
         background-color:rgba(255,255,255,0.2);
