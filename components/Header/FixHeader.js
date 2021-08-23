@@ -1,10 +1,11 @@
 import React from 'react'
-import { WavesContainer, Container, Div1, Div2, Div3, NavLink, SocialIcons } from './Header.styles';
+import { WavesContainer, Container, Div1, Div2, Div3, NavLink, SocialIcons, FixHeaderContainer } from './Header.styles';
+import Link from 'next/link';
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
 
 const FixHeader = () => {
     return (
-        <div>
+        <FixHeaderContainer style={{position:'fixed',top:'0px',margin:'auto',zIndex:'2'}}>
             <Container>
                 <Div1>
                     <Link href="/" style="margin:auto">
@@ -42,7 +43,7 @@ const FixHeader = () => {
                     </SocialIcons>
                 </Div3>
             </Container>
-        </div>
+        </FixHeaderContainer>
     )
 }
 

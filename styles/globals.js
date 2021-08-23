@@ -29,7 +29,28 @@ ${normalize};
     li{
         list-style: none;
     }
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 12px
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #d6dee1;
+        border-radius: 10px;
+        height:10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #d6dee1;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        background-clip: content-box;
+        height:10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #a8bbbf;
+        height:10px;
+    }
 
+}
 `;
 
 

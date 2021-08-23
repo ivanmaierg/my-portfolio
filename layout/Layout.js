@@ -1,12 +1,15 @@
 import React from 'react';
-import Header from '../components/Header/Header';
+import FixHeader from '../components/Header/FixHeader';
+
+import { WavesContainer } from '../components/Header/Header.styles';
 import { Container } from './LayoutStyles';
 
 export const Layout = ({ children }) => {
     return (
-        <Container>
-            <Header />
-            <main style={{margin:'2rem 0'}}>{children}</main>
-        </Container>
+        <div>
+            <WavesContainer/>
+            <FixHeader/>
+            <main style={{ margin: '2rem 0' }}>{children}</main>
+        </div>
     )
 }

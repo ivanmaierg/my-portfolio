@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+    opacity:${(props) => props.inView ? '1' : '0' };
     display:flex;
     align-items:center;
     justify-content:space-between;
     min-Width:25rem;
     min-height:45rem;
+    transition:ease-in-out all 2s;
 `
 export const InfoContainer = styled.div`
         display:flex;
@@ -24,7 +26,7 @@ export const InfoContainer = styled.div`
         }
         & h2 {
             margin-bottom:1rem;
-            color:${(props)=>{props.theme.colors.gray300}};
+            color:${(props) => { props.theme.colors.gray300 }};
         }
         & h3 {
             font-size:3rem;

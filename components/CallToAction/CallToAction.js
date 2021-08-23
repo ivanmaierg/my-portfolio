@@ -1,9 +1,9 @@
 import React from 'react'
 import { ButtonAction, Container, InfoContainer, Portrait } from './CallToAction.styles'
 import  Link  from 'next/link';
-const CallToAction = () => {
+const CallToAction = ({inView}) => {
     return (
-        <Container>
+        <Container inView={inView}>
             <InfoContainer>
                 <h2 >Hi, my name is </h2>
                 <h1>Ivan Maier Gallardo</h1>

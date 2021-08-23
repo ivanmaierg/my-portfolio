@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import About from '../components/About/About'
 import CallToAction from '../components/CallToAction/CallToAction'
-import { educationInfo } from '../data/data'
+import { educationInfo,Skills} from '../data/data'
 import { Layout } from '../layout/Layout'
 import { Container, Background } from '../layout/LayoutStyles'
 import { useInView } from 'react-intersection-observer';
@@ -9,13 +9,17 @@ import Projects from '../components/Projects/Projects'
 
 
 export default function Home(props) {
-  const { ref, inView, entry } = useInView({
+  const { ref:refAbout, inView:inViewAbout, entry:entryAbout } = useInView({
     /* Optional options */
-    threshold: 1,
-    delay:150,
+    threshold: 0.5,
     triggerOnce:true,
   });
-  console.log(inView)
+  const { ref:refCallToAction, inView:inViewCallToAction, entry:entryCallToAction } = useInView({
+    /* Optional options */
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+
   return (
     <>
       <Head>
@@ -24,15 +28,14 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <Container><CallToAction /></Container>
-        <Background url='./stacked-waves-haikei.svg' id='About'>
-          <Container ref={ref} >
-            <About education={props.educationData} inView={inView} />
+        <Container ref={refCallToAction}><CallToAction inView={inViewCallToAction}/></Container>
+        <Background url={'./stacked-waves-haikei.svg'} id='About'>
+          <Container ref={refAbout} >
+            <About education={props.educationData} inView={inViewAbout} skills={props.skills}/>
             </Container>
         </Background>
         <Container>
-        <Projects/>
-
+        <Projects/> 
         </Container>
       </Layout>
     </>
@@ -43,12 +46,13 @@ export default function Home(props) {
 
 export async function getStaticProps(context) {
   const educationData = educationInfo;
+  const skills = Skills;
   if (!educationData) {
     return {
       notFound: true,
     }
   }
   return {
-    props: { educationData }, // will be passed to the page component as props
+    props: { educationData , skills}, // will be passed to the page component as props
   }
 }
