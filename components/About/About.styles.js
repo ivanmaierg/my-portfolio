@@ -77,7 +77,7 @@ export const ItemList = styled.li`
     & p{
         color:#FFFF;
     } 
-    background-color:${(props) => { return props.id % 2 === 0 ? props.theme.colors.accent1 : props.theme.colors.accent2 }};
+    background-color:${(props) => { return props.key % 2 === 0 ? props.theme.colors.accent1 : props.theme.colors.accent2 }};
     
     @media ${(props) => props.theme.breakpoints.md}{
     & li > p {
