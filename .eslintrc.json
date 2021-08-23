@@ -23,7 +23,6 @@
         "react"
     ],
     "rules": {
-        "react/prop-types": "on",
         "react/react-in-jsx-scope": "off"
     }
 
