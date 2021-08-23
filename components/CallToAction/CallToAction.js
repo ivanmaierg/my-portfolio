@@ -1,5 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
-import { ButtonAction, Container, InfoContainer, Portrait } from './CallToAction.styles'
+import { ButtonAction, Container, InfoContainer } from './CallToAction.styles'
 import  Link  from 'next/link';
 const CallToAction = ({inView}) => {
     return (

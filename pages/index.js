@@ -44,7 +44,7 @@ export default function Home(props) {
 
 
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const educationData = educationInfo;
   const skills = Skills;
   if (!educationData) {
