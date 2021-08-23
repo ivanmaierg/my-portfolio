@@ -1,9 +1,7 @@
 import React from 'react'
-import { useInView } from 'react-intersection-observer';
-import { AboutContainer, Technologies, GlassContainer, Portrait, Education, AboutMe, List, ItemList } from './About.styles';
+import { AboutContainer, Technologies, Portrait,  AboutMe, List, ItemList } from './About.styles';
 
-const About = ({ education, inView, skills }) => {
-    console.log(skills)
+const About = ({  inView, skills }) => {
     return (
         <AboutContainer inView={inView}>
             <Portrait><img alt='my portrait' style={{ height: '100%', width: '100%', objectFit: 'cover' }} src='/portrait.jpg'></img></Portrait>
@@ -37,7 +35,7 @@ const About = ({ education, inView, skills }) => {
                 <List>
                     {skills.map(el => {
                         return(
-                            <ItemList id={el.id}>
+                            <ItemList key={el.id}>
                                 {el.url !== '' ? <span><img src={el.url} /></span> : ''}
                                 <p>
                                     {el.name}

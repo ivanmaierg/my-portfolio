@@ -1,4 +1,3 @@
-import { IoIosArrowDropdown } from 'react-icons/io';
 import styled from 'styled-components';
 
 export const WavesContainer = styled.div`
