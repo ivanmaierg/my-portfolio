@@ -1,10 +1,21 @@
 import Head from 'next/head'
+import About from '../components/About/About'
 import CallToAction from '../components/CallToAction/CallToAction'
-import Header from '../components/Header/Header'
+import { educationInfo } from '../data/data'
 import { Layout } from '../layout/Layout'
+import { Container, Background } from '../layout/LayoutStyles'
+import { useInView } from 'react-intersection-observer';
+import Projects from '../components/Projects/Projects'
 
 
-export default function Home() {
+export default function Home(props) {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 1,
+    delay:150,
+    triggerOnce:true,
+  });
+  console.log(inView)
   return (
     <>
       <Head>
@@ -13,8 +24,31 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <CallToAction />
+        <Container><CallToAction /></Container>
+        <Background url='./stacked-waves-haikei.svg' id='About'>
+          <Container ref={ref} >
+            <About education={props.educationData} inView={inView} />
+            </Container>
+        </Background>
+        <Container>
+        <Projects/>
+
+        </Container>
       </Layout>
     </>
   )
+}
+
+
+
+export async function getStaticProps(context) {
+  const educationData = educationInfo;
+  if (!educationData) {
+    return {
+      notFound: true,
+    }
+  }
+  return {
+    props: { educationData }, // will be passed to the page component as props
+  }
 }

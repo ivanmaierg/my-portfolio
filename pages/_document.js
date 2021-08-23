@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
                     <link rel="icon" href="/favicon.ico" />
                     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
                     <link rel="preconnect" href="https://fonts.googleapis.com"/>
-                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
                     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
                 </Head>
                 <body>
