@@ -11,6 +11,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "emotion-reset": "^3.0.1",
+    "framer-motion": "^4.1.17",
     "next": "^11.1.0",
     "react": "17.0.2",
     "react-animated-css": "^1.2.1",
