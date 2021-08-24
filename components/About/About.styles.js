@@ -43,7 +43,7 @@ export const GlassContainer = styled.div`
     @media ${(props) => props.theme.breakpoints.md}{
         & h3 {
         font-size:2rem;
-        padding:2rem 0;
+        padding:1rem;
     }
     & p {
         text-align:justify;
