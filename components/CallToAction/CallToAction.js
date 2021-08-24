@@ -1,23 +1,24 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import { ButtonAction, Container, InfoContainer } from './CallToAction.styles'
-import { Animated } from "react-animated-css";
+
 import Link from 'next/link';
 
-const CallToAction = ({ inView }) => {
+const CallToAction = () => {
     return (
         <Container>
-            <Animated animationIn="fadeInUp" animationInDelay="1000" isVisible={inView}>
-                <InfoContainer>
-                    <h2 >Hi, my name is </h2>
+            <InfoContainer initial={{ opacity: 0, x: '-100vw' }} animate={{ opacity: 1, x: '0'}} transition={{type:'spring', stiffness:50}}>
+                    <h2 >Hola, mi nombre es </h2>
                     <h1>Ivan Maier Gallardo</h1>
-                    <h3>A really passionate developer</h3>
-                    <p>I'm <strong>front-end developer</strong> and <strong>CS student</strong> really interested on <strong>building amazing user interfaces</strong> . My interests goes around javascript's web technologies ecosystem, and the web platform as a all.</p>
-                    <Link href="#About"><ButtonAction href="#About"><span>About me</span></ButtonAction></Link>
+                    <h3>Desarrollador Front end</h3>
+                <p>Soy un estudiante de  <strong> informática </strong> y <strong>desarrollador web </strong> interesado en  la construccón de <strong>interfaces de usuario</strong> . Mis intereses giran en torno a el ecositema de tecnologías de javascript y la plataforma web en general.</p>
+                <Link href="#About"><ButtonAction href="#About" whileHover={{ scale: 1.2, originX: 0.3,originY:0, filter:'brightness(1.3)', }} transition={{type:'spring',stiffness:'120'}}><span>About me</span></ButtonAction></Link>
                 </InfoContainer>
-            </Animated>
         </Container>
     )
 }
-
+                //   <h2 >Hi, my name is </h2>
+                //     <h1>Ivan Maier Gallardo</h1>
+                //     <h3>A really passionate developer</h3>
+                //     <p>I'm <strong>front-end developer</strong> and <strong>CS student</strong> really interested on <strong>building amazing user interfaces</strong> . My interests goes around javascript's web technologies ecosystem, and the web platform as a all.</p>
 export default CallToAction

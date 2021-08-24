@@ -1,23 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import { Animated } from 'react-animated-css';
+import { AnimateSharedLayout } from 'framer-motion';
+import React from 'react'
 import { AboutContainer, Technologies, Portrait, AboutMe, List, ItemList, InfoWrapper } from './About.styles';
 
-const About = ({ inView, skills }) => {
-    const [view, setView] = useState(false);
-    useEffect(() => {
-        setView(inView)
-        console.log(view)
-    }, [inView])
+const About = ({ skills }) => {
     return (
-        <AboutContainer view={view}>
-            <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={view}>
-                <Portrait animationInDelay="800" >
+        <AboutContainer>
+        <AnimateSharedLayout>
+                <Portrait initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.5, type: 'spring', stiffness: 120 }}>
                     <img alt='my portrait' style={{ height: '100%', width: '100%', objectFit: 'cover' }} src='/portrait.jpg'></img>
                 </Portrait>
-            </Animated>
-            <InfoWrapper>
-                <Animated animationInDelay="1000" animationIn="fadeInRight" isVisible={view}>
-                    <AboutMe >
+                <InfoWrapper>
+                    <AboutMe layout={true} initial={{ x: '-100vw', opacity: 0 }} animate={{ opacity: 1 , x: '0'}} transition={{ delay: 0.5, type: 'spring', stiffness: 50 }}>
                         <h3>Acerca de mí:</h3>
                         <p>
                             Hola! mi nombre es Iván, soy estudiante de informática y desarrollador web.
@@ -28,9 +21,7 @@ const About = ({ inView, skills }) => {
                             Mis objetivos son seguir mejorando como desarrollador, buscando nuevos desafios y responsabilidades que asumir.
                         </p>
                     </AboutMe>
-                </Animated>
-                <Animated animationInDelay="1500" animationIn="bounceInLeft" animationOut="fadeOut" isVisible={view}>
-                    <Technologies>
+                    <Technologies layout={true} initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1, type: 'spring', stiffness: 50 }}>
                         <h3>Tecnologías:</h3>
                         <List>
                             {skills.map(el => {
@@ -45,8 +36,8 @@ const About = ({ inView, skills }) => {
                             })}
                         </List>
                     </Technologies>
-                </Animated>
-            </InfoWrapper>
+                </InfoWrapper>
+        </AnimateSharedLayout>
         </AboutContainer>
     )
 }

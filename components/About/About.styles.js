@@ -1,13 +1,12 @@
 import styled from 'styled-components';
+import { motion } from "framer-motion"
 
 export const AboutContainer = styled.section`  
-    visibility:${(props) => props.view ? 'visible' : 'hidden'};
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     align-items:flex-start;
     grid-gap:4rem;
-    transition:ease-in-out 1.5s all;
     @media ${(props) => props.theme.breakpoints.md}{
         flex-direction:column;
         justify-content:center;
@@ -17,7 +16,7 @@ export const AboutContainer = styled.section`
 `
 
 
-export const GlassContainer = styled.div`    
+export const GlassContainer = styled(motion.div)`    
     backdrop-filter: blur(4px) saturate(118%);
     -webkit-backdrop-filter: blur(4px) saturate(118%);
     background-color: rgba(17, 25, 40, 0.65);
@@ -55,6 +54,7 @@ export const GlassContainer = styled.div`
     
     }
 `;
+
 
 export const List = styled.ul` 
         display:flex;
@@ -100,7 +100,7 @@ export const Education = styled(GlassContainer)`
     justify-content: stretch;
     align-items:stretch;
     height:100%;
-    width:100%;
+    width:auto;
     & h4 {
         font-size:2rem;
     }
@@ -110,11 +110,11 @@ export const Education = styled(GlassContainer)`
 `
 export const Technologies = styled(GlassContainer)` 
     flex:1;
-    width:100%;
+    width:auto;
     min-height:10rem;
 `
 
-export const Portrait = styled.div`
+export const Portrait = styled(motion.div)`
     flex:2;
     display: flex;
     border-radius:12px;
