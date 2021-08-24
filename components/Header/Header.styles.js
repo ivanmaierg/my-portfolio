@@ -20,7 +20,7 @@ export const WavesContainer = styled.div`
     @media ${(props) => props.theme.breakpoints.sm}{
         background:url('/wave-sm.svg');
         background-position-y:-130px;
-        height:20rem;
+        height:13rem;
         transition: all  300ms;
     }
 `;
