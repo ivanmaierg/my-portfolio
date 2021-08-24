@@ -6,6 +6,7 @@ const About = ({ inView, skills }) => {
     const [view, setView] = useState(false);
     useEffect(() => {
         setView(inView)
+        console.log(view)
     }, [inView])
     return (
         <AboutContainer view={view}>
@@ -15,7 +16,7 @@ const About = ({ inView, skills }) => {
                 </Portrait>
             </Animated>
             <InfoWrapper>
-                <Animated animationInDelay="1000" animationIn="fadeInRight" animationOut="fadeOut" isVisible={view}>
+                <Animated animationInDelay="1000" animationIn="fadeInRight" isVisible={view}>
                     <AboutMe >
                         <h3>Acerca de mí:</h3>
                         <p>
