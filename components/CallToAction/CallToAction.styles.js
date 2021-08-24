@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-    opacity:${(props) => props.inView ? '1' : '0' };
     display:flex;
     align-items:center;
     justify-content:space-between;
     min-Width:25rem;
     min-height:45rem;
-    transition:ease-in-out all 2s;
 `
 export const InfoContainer = styled.div`
         display:flex;
@@ -69,7 +67,10 @@ export const ButtonAction = styled.button`
         filter:brightness(1.1)
     }
     & a {
+        display:block;
         text-decoration:none;
         color:rgba(256,256,256,0.8);
+        width:100%;
+        height:100%;
     }
 `

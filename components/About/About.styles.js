@@ -1,21 +1,17 @@
 import styled from 'styled-components';
 
-
-
-
 export const AboutContainer = styled.section`  
-    opacity:${(props) => (props.inView ? '1' : '0')};
-    display:flex;
+    display:${(props) => props.view ? 'flex' : 'none'};
     flex-wrap:wrap;
     justify-content:center;
     align-items:flex-start;
-    padding:5rem 0;
-    grid-gap:2rem;
+    grid-gap:4rem;
     transition:ease-in-out 1.5s all;
     @media ${(props) => props.theme.breakpoints.md}{
         flex-direction:column;
         justify-content:center;
         align-items:center;
+        grid-gap:2rem;
     }
 `
 
@@ -26,10 +22,10 @@ export const GlassContainer = styled.div`
     background-color: rgba(17, 25, 40, 0.65);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
-    padding:2rem 4rem;
+    padding:3rem 5rem;
     & h3 {
         font-size:3rem;
-        padding:2rem 0;
+        padding-bottom:2rem;
     }
     & p {
         text-align:justify;
@@ -77,8 +73,7 @@ export const ItemList = styled.li`
     & p{
         color:#FFFF;
     } 
-    background-color:${(props) => { return props.key % 2 === 0 ? props.theme.colors.accent1 : props.theme.colors.accent2 }};
-    
+    background-color:${(props) => { return props.id % 2 === 0 ? props.theme.colors.accent1 : props.theme.colors.accent2 }};
     @media ${(props) => props.theme.breakpoints.md}{
     & li > p {
     text-align:start;
@@ -126,7 +121,12 @@ export const Portrait = styled.div`
     justify-self:start;
     height:300px;
     max-width:300px;
-    
+    min-width:180px;
 
 `
 
+export const InfoWrapper = styled.div`
+    display: flex;
+    flex-direction:column;
+    gap:2rem;
+`;
