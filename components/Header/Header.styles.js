@@ -150,20 +150,26 @@ export const SocialIcons = styled.a`
     border-radius:50%;
     height:40px;
     width:40px;
+    color:white!important;
     transition: 0.4s ease;
     &:hover{
         background-color:rgba(255,255,255,0.2);
         cursor: pointer;
         transform: scale(115%);
-    }
+    };
+    & a > * {
+        text-decoration:none;
+        color:white!important;
+    };
     @media ${(props => props.theme.breakpoints.sm)}{
         &:hover{
             transform: scale(110%);
         }
     }
-    > * {
+    & * {
         margin:auto;
     }
+    };
 `
 
 

@@ -5,7 +5,7 @@ import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/a
 
 const FixHeader = () => {
     return (
-        <FixHeaderContainer style={{position:'fixed',top:'0px',margin:'auto',zIndex:'2'}}>
+        <FixHeaderContainer style={{ position: 'fixed', top: '0px', margin: 'auto', zIndex: '2' }}>
             <Container>
                 <Div1>
                     <Link href="/" style="margin:auto">
@@ -32,13 +32,13 @@ const FixHeader = () => {
                     </li>
                 </Div2>
                 <Div3>
-                    <SocialIcons>
+                    <SocialIcons href='https://github.com/Getsuga743' rel="noreferrer" target="_blank">
                         <AiFillGithub size="2.5rem" />
                     </SocialIcons>
-                    <SocialIcons style={{ margin: '0' }}>
+                    <SocialIcons href='https://linkedin.com/in/ivan-maier-gallardo-461b70176' rel="noreferrer" target="_blank">
                         <AiFillLinkedin size="2.5rem" />
                     </SocialIcons>
-                    <SocialIcons>
+                    <SocialIcons href='https://twitter.com/imaierg' rel="noreferrer" target="_blank">
                         <AiFillTwitterCircle size="2.5rem" />
                     </SocialIcons>
                 </Div3>
