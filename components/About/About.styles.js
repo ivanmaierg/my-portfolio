@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const AboutContainer = styled.section`  
-    display:${(props) => props.view ? 'flex' : 'none'};
+    visibility:${(props) => props.view ? 'visible' : 'hidden'};
+    display:flex;
     flex-wrap:wrap;
     justify-content:center;
     align-items:flex-start;

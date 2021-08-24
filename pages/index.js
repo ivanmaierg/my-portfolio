@@ -11,7 +11,7 @@ import Projects from '../components/Projects/Projects'
 export default function Home(props) {
   const { ref: refAbout, inView: inViewAbout } = useInView({
     /* Optional options */
-    threshold: 1,
+    threshold: 0.3,
     triggerOnce: true,
   });
   const { ref: refCallToAction, inView: inViewCallToAction} = useInView({
@@ -19,7 +19,7 @@ export default function Home(props) {
     threshold: 0.5,
     triggerOnce: true,
   });
-
+  console.log(inViewAbout)
   return (
     <>
       <Head>
@@ -30,8 +30,8 @@ export default function Home(props) {
       </Head>
       <Layout>
         <Container ref={refCallToAction}><CallToAction inView={inViewCallToAction} /></Container>
-        <Background url={'./stacked-waves-haikei.svg'} id='About'>
-          <Container ref={refAbout} >
+        <Background ref={refAbout} url={'./stacked-waves-haikei.svg'} id='About'>
+          <Container>
             <About education={props.educationData} inView={inViewAbout} skills={props.skills} />
           </Container>
         </Background>
