@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const Container = styled.section`
@@ -7,7 +8,7 @@ export const Container = styled.section`
     min-Width:25rem;
     min-height:45rem;
 `
-export const InfoContainer = styled.div`
+export const InfoContainer = styled(motion.div)`
         display:flex;
         margin:5rem 0;
         flex-direction:column;
@@ -41,16 +42,15 @@ export const InfoContainer = styled.div`
             margin-bottom:2rem;
         }
         @media ${(props => props.theme.breakpoints.md)}{
-        flex-direction:column;
-        height:auto;
-        width:100%
+            height:auto;
+            width:100%
     }
 `
 
 
 
 
-export const ButtonAction = styled.button`
+export const ButtonAction = styled(motion.button)`
     color:rgba(256,256,256,0.8);
     font-weight: 700;
     border: none;
@@ -58,14 +58,7 @@ export const ButtonAction = styled.button`
     width: 15rem;
     padding:1rem 2rem;
     background:linear-gradient(90deg, rgba(198,35,104,1) 20%, rgba(250,114,104,1) 85%);
-    transition:ease-in-out 150ms;
     cursor:pointer;
-    &:hover{
-        transform:scale(1.05);
-        box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.3);
-        transition:ease-in-out 150ms;
-        filter:brightness(1.1)
-    }
     & a {
         display:block;
         text-decoration:none;

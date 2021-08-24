@@ -11,15 +11,9 @@ import Projects from '../components/Projects/Projects'
 export default function Home(props) {
   const { ref: refAbout, inView: inViewAbout } = useInView({
     /* Optional options */
-    threshold: 0.3,
+    threshold: 1,
     triggerOnce: true,
   });
-  const { ref: refCallToAction, inView: inViewCallToAction} = useInView({
-    /* Optional options */
-    threshold: 0.5,
-    triggerOnce: true,
-  });
-  console.log(inViewAbout)
   return (
     <>
       <Head>
@@ -29,10 +23,12 @@ export default function Home(props) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
       </Head>
       <Layout>
-        <Container ref={refCallToAction}><CallToAction inView={inViewCallToAction} /></Container>
-        <Background ref={refAbout} url={'./stacked-waves-haikei.svg'} id='About'>
-          <Container>
-            <About education={props.educationData} inView={inViewAbout} skills={props.skills} />
+        <Container>
+          <CallToAction/>
+        </Container>
+        <Background url={'./stacked-waves-haikei.svg'} id='About'>
+          <Container ref={refAbout}>
+            {inViewAbout && <About education={props.educationData} skills={props.skills} />}
           </Container>
         </Background>
         <Container>
