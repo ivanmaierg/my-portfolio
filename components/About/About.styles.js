@@ -41,17 +41,17 @@ export const GlassContainer = styled.div`
     &
     }
     @media ${(props) => props.theme.breakpoints.md}{
+        padding:3rem 2rem;
         & h3 {
-        font-size:2rem;
-        padding:1rem;
-    }
-    & p {
-        text-align:justify;
-        font-size:2rem;
-        font-family:${(props) => props.theme.fonts.main};
-        color:${(props) => props.theme.colors.gray500};
-        line-height:3.5rem;
-    }
+            font-size:2rem;
+        }
+        & p {
+            text-align:justify;
+            font-size:2rem;
+            font-family:${(props) => props.theme.fonts.main};
+            color:${(props) => props.theme.colors.gray500};
+            line-height:3.5rem;
+        }
     
     }
 `;
