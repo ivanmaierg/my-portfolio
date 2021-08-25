@@ -16,19 +16,13 @@ const FixHeader = () => {
                 </Div1>
                 <Div2>
                     <li>
-                        <Link href="#About">
-                            <NavLink>About</NavLink>
-                        </Link>
+                            <NavLink href="#About">About</NavLink>
                     </li>
                     <li>
-                        <Link href="#About">
                             <NavLink>Projects</NavLink>
-                        </Link>
                     </li>
                     <li>
-                        <Link href="#About">
                             <NavLink>Cv</NavLink>
-                        </Link>
                     </li>
                 </Div2>
                 <Div3>

@@ -7,6 +7,10 @@ export const Container = styled.section`
     justify-content:space-between;
     min-Width:25rem;
     min-height:45rem;
+    @media ${(props => props.theme.breakpoints.md)}{
+        flex-direction:column;
+        margin-bottom:5rem;
+    }
 `
 export const InfoContainer = styled(motion.div)`
         display:flex;
@@ -15,7 +19,6 @@ export const InfoContainer = styled(motion.div)`
         justify-content:flex-start;
         align-items:flex-start;
         min-height:18.75rem;
-        height:40vh;
         width:50%;
         color:${(props) => props.theme.colors.gray500};
         & h1 {
