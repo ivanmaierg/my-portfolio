@@ -123,7 +123,6 @@ export const Portrait = styled(motion.div)`
     height:300px;
     max-width:300px;
     min-width:180px;
-
 `
 
 export const InfoWrapper = styled.div`

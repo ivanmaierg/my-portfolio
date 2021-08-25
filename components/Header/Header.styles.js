@@ -26,8 +26,8 @@ export const WavesContainer = styled.div`
 `;
 
 export const FixHeaderContainer = styled.div`
-    width:100%;
     display: flex;
+    width:100%;
     align-items: flex-start;
     justify-content:center;
     background-color:${(props)=> props.theme.colors.accent1};
@@ -38,12 +38,6 @@ export const FixHeaderContainer = styled.div`
         transition:all 220ms;
         height:10rem;
         background-color:${(props) => props.theme.colors.accent1};
-    }
-    @media ${(props) => props.theme.breakpoints.sm}{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        height:auto;
     }
 `
 

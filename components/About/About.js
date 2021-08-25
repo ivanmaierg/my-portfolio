@@ -1,14 +1,11 @@
 import { AnimateSharedLayout } from 'framer-motion';
 import React from 'react'
-import { AboutContainer, Technologies, Portrait, AboutMe, List, ItemList, InfoWrapper } from './About.styles';
+import { AboutContainer, Technologies, AboutMe, List, ItemList, InfoWrapper } from './About.styles';
 
 const About = ({ skills }) => {
     return (
         <AboutContainer>
         <AnimateSharedLayout>
-                <Portrait initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.5, type: 'spring', stiffness: 120 }}>
-                    <img alt='my portrait' style={{ height: '100%', width: '100%', objectFit: 'cover' }} src='/portrait.jpg'></img>
-                </Portrait>
                 <InfoWrapper>
                     <AboutMe layout={true} initial={{ x: '-100vw', opacity: 0 }} animate={{ opacity: 1 , x: '0'}} transition={{ delay: 0.5, type: 'spring', stiffness: 50 }}>
                         <h3>Acerca de mí:</h3>
