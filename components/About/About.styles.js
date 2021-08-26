@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from "framer-motion"
+import { GlassContainer } from '../../styles/GlobalComponents/GlassContainer.styles';
 
 export const AboutContainer = styled.section`  
     display:flex;
@@ -16,7 +17,7 @@ export const AboutContainer = styled.section`
 `
 
 
-export const GlassContainer = styled(motion.div)`    
+export const GlassCardContainer = styled(GlassContainer)`    
     backdrop-filter: blur(4px) saturate(118%);
     -webkit-backdrop-filter: blur(4px) saturate(118%);
     background-color: rgba(17, 25, 40, 0.65);
@@ -82,7 +83,7 @@ export const ItemList = styled.li`
 }
 `;
 
-export const AboutMe = styled(GlassContainer)` 
+export const AboutMe = styled(GlassCardContainer)` 
     display: flex;
     flex:2;
     flex-direction:column;
@@ -93,7 +94,7 @@ export const AboutMe = styled(GlassContainer)`
 `
 
 
-export const Education = styled(GlassContainer)` 
+export const Education = styled(GlassCardContainer)` 
     display: flex;
     flex:2;
     flex-direction:column;
@@ -108,7 +109,7 @@ export const Education = styled(GlassContainer)`
         padding:1rem 0;
     }
 `
-export const Technologies = styled(GlassContainer)` 
+export const Technologies = styled(GlassCardContainer)` 
     flex:1;
     width:auto;
     min-height:10rem;
