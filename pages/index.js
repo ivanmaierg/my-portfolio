@@ -3,7 +3,6 @@ import About from '../components/About/About'
 import CallToAction from '../components/CallToAction/CallToAction'
 import { educationInfo, Skills, projectsInfo } from '../data/data'
 import { Layout } from '../layout/Layout'
-import { Container, Background } from '../layout/LayoutStyles'
 import { useInView } from 'react-intersection-observer';
 import Projects from '../components/Projects/Projects'
 
@@ -23,17 +22,11 @@ export default function Home(props) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
       </Head>
       <Layout>
-        <Container>
-          <CallToAction />
-        </Container>
-        <Background url={'./stacked-waves-haikei.svg'} id='About'>
-          <Container ref={refAbout}>
-            {inViewAbout && <About education={props.educationData} skills={props.skills} />}
-          </Container>
-        </Background>
-        <Container>
-          <Projects projects={props.projects}/>
-        </Container>
+        <CallToAction />
+        <div ref={refAbout}>
+          {inViewAbout && <About education={props.educationData} skills={props.skills} />}
+        </div>
+        <Projects projects={props.projects} />
       </Layout>
     </>
   )

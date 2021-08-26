@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { motion } from "framer-motion"
 import { GlassContainer } from '../../styles/GlobalComponents/GlassContainer.styles';
 
 export const AboutContainer = styled.section`  
@@ -27,16 +26,17 @@ export const GlassCardContainer = styled(GlassContainer)`
     & h3 {
         font-size:3rem;
         padding-bottom:2rem;
+        color:${(props) => props.theme.colors.headLine};
     }
     & p {
         text-align:justify;
         font-size:2rem;
         font-family:${(props) => props.theme.fonts.main};
-        color:${(props) => props.theme.colors.gray500};
+        color:${(props) => props.theme.colors.paragraph};
         line-height:3.5rem;
     }
     & p > strong {
-        color:${(props) => props.theme.colors.gray300};
+        color:${(props) => props.theme.colors.headLine};
     }
     &
     }
@@ -49,13 +49,16 @@ export const GlassCardContainer = styled(GlassContainer)`
             text-align:justify;
             font-size:2rem;
             font-family:${(props) => props.theme.fonts.main};
-            color:${(props) => props.theme.colors.gray500};
+            color:${(props) => props.theme.colors.paragraph};
             line-height:3.5rem;
         }
     
     }
 `;
 
+<ul className='List#asdasd2136'>
+    
+</ul>
 
 export const List = styled.ul` 
         display:flex;
@@ -63,7 +66,7 @@ export const List = styled.ul`
         flex-wrap:wrap;
         font-size:2rem;
         font-weight:600;
-        color:${(props) => props.theme.colors.gray300};
+        color:${(props) => props.theme.colors.headLine};
     }
 `;
 export const ItemList = styled.li`
@@ -75,7 +78,7 @@ export const ItemList = styled.li`
     & p{
         color:#FFFF;
     } 
-    background-color:${(props) => { return props.id % 2 === 0 ? props.theme.colors.accent1 : props.theme.colors.accent2 }};
+    background-color:${(props) => { return props.id % 2 === 0 ? props.theme.colors.primary : props.theme.colors.secondary }};
     @media ${(props) => props.theme.breakpoints.md}{
     & li > p {
     text-align:start;
@@ -115,16 +118,7 @@ export const Technologies = styled(GlassCardContainer)`
     min-height:10rem;
 `
 
-export const Portrait = styled(motion.div)`
-    flex:2;
-    display: flex;
-    border-radius:12px;
-    overflow:hidden;
-    justify-self:start;
-    height:300px;
-    max-width:300px;
-    min-width:180px;
-`
+
 
 export const InfoWrapper = styled.div`
     display: flex;

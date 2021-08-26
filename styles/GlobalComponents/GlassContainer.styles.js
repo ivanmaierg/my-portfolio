@@ -11,5 +11,6 @@ export const GlassContainer = styled(motion.div)`
     padding:3rem 5rem;
     @media ${(props) => props.theme.breakpoints.md}{
         padding:3rem 2rem;
+        max-width:800px;
     }
 `

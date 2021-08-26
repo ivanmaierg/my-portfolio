@@ -98,10 +98,32 @@ export const Skills = [
 
 export const projectsInfo = [
     {
-        title: 'Titulo',
-        url: 'https://linkedin.com',
-        repository: 'https://github.com',
+        title: 'Easy landing Bank',
+        url: 'https://github.com/Getsuga743/Easybank-landing',
+        img:'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/yezt1f56cfp2njnakpbo.jpg',
+        repository: 'https://github.com/Getsuga743/Easybank-landing',
         technologies: ['React', 'Sass', 'Redux', 'Node'],
-        description: "is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially",
-    }
+        description: "Reto de https://www.frontendmentor.io/challenges. Maquetado de una landing page para un banco, hecha con html, sass, y javascript. Diseño full responsive",
+    }, {
+        title: 'Easy landing Bank',
+        url: 'https://github.com/Getsuga743/Easybank-landing',
+        img: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/yezt1f56cfp2njnakpbo.jpg',
+        repository: 'https://github.com/Getsuga743/Easybank-landing',
+        technologies: ['React', 'Sass', 'Redux', 'Node'],
+        description: "Reto de https://www.frontendmentor.io/challenges. Maquetado de una landing page para un banco, hecha con html, sass, y javascript. Diseño full responsive",
+    }, {
+        title: 'Easy landing Bank',
+        url: 'https://github.com/Getsuga743/Easybank-landing',
+        img: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/yezt1f56cfp2njnakpbo.jpg',
+        repository: 'https://github.com/Getsuga743/Easybank-landing',
+        technologies: ['React', 'Sass', 'Redux', 'Node'],
+        description: "Reto de https://www.frontendmentor.io/challenges. Maquetado de una landing page para un banco, hecha con html, sass, y javascript. Diseño full responsive",
+    }, {
+        title: 'Easy landing Bank',
+        url: 'https://github.com/Getsuga743/Easybank-landing',
+        img: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/yezt1f56cfp2njnakpbo.jpg',
+        repository: 'https://github.com/Getsuga743/Easybank-landing',
+        technologies: ['React', 'Sass', 'Redux', 'Node'],
+        description: "Reto de https://www.frontendmentor.io/challenges. Maquetado de una landing page para un banco, hecha con html, sass, y javascript. Diseño full responsive",
+    },
 ]

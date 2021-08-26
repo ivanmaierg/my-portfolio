@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const WavesContainer = styled.div`
@@ -15,7 +16,7 @@ export const WavesContainer = styled.div`
     @media ${(props) => props.theme.breakpoints.xl}{
         transition:all 220ms;
         height:10rem;
-        background-color:${(props)=> props.theme.colors.accent1};
+        background-color:${(props)=> props.theme.colors.primary};
     }
     @media ${(props) => props.theme.breakpoints.sm}{
         background:url('/wave-sm.svg');
@@ -26,18 +27,22 @@ export const WavesContainer = styled.div`
 `;
 
 export const FixHeaderContainer = styled.div`
+    position:fixed;
+    top:0px;
+    margin:auto;
+    z-index:2;
     display: flex;
     width:100%;
     align-items: flex-start;
     justify-content:center;
-    background-color:${(props)=> props.theme.colors.accent1};
+    background-color:${(props)=> props.theme.colors.primary};
     height:auto;
     transition:all 350ms;
     margin:auto;
     @media ${(props) => props.theme.breakpoints.xl}{
         transition:all 220ms;
         height:10rem;
-        background-color:${(props) => props.theme.colors.accent1};
+        background-color:${(props) => props.theme.colors.primary};
     }
 `
 
@@ -71,7 +76,7 @@ export const Div2 = styled.nav`
     grid-area: 1 / 2 / 2 / 6;
     display: flex;
     justify-content:space-around;
-    align-items: flex-end;
+    align-items: center;
     li{
         list-style: none;
     }
@@ -96,70 +101,32 @@ export const Div3 = styled.div`
 }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(motion.a)`
     height:100%;
     margin:0;
     display: block;
     font-size:1.5rem;
     font-weight: bold;
     line-height: 32px;
-    text-align: basel;
-    color:rgba(255,255,255,0.80);
-    transition: 0.4s ease;
-    &:after{
-        display: block;
-        position: relative;
-        content:"" ;
-        width: 0;
-        left: 50%;
-        height:2.5px;
-        visibility: visible;
-        transition: all 150ms ease-in-out;
-    }
-    &:hover::after{
-        display: block;
-        content:"";
-        position: relative;
-        bottom: 0px;
-        width: 100%;
-        left:0px;
-        visibility: visible;
-        background:#ffff;
-        border-radius: 5px;
-    }
-    &:hover{
-        opacity: 1;
-        cursor: pointer;
-        color:#ffff;
-        font-weight: 800;
-    }
+    text-align: baseline;
+    cursor: pointer;
+    color:${(props => props.theme.colors.headLine)};
     @media ${(props => props.theme.breakpoints.sm)} {
         font-size:1.8rem;
     }
 `
-export const SocialIcons = styled.a`
+export const SocialIcons = styled(motion.a)`
     display: flex;
     justify-content:flex-end;
     align-items: center;
     border-radius:50%;
     height:40px;
     width:40px;
-    color:white!important;
-    transition: 0.4s ease;
-    &:hover{
-        background-color:rgba(255,255,255,0.2);
-        cursor: pointer;
-        transform: scale(115%);
-    };
+    color:${(props => props.theme.colors.headLine)};
     & a > * {
         text-decoration:none;
         color:white!important;
     };
-    @media ${(props => props.theme.breakpoints.sm)}{
-        &:hover{
-            transform: scale(110%);
-        }
-    }
     & * {
         margin:auto;
     }
