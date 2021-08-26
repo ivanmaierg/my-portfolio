@@ -1,29 +1,20 @@
 import React from 'react'
-import { GlassContainer } from '../../styles/GlobalComponents/GlassContainer.styles'
+
+
+import { ProjectsContainer } from './Projects.styles';
+import ProjectCard from '../ProjectCard/ProjectCard';
 
 
 const Projects = ({ projects }) => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', margin: 'auto', height: '5rem' }}>
-            <h3>Projects:</h3>
+        <ProjectsContainer style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', margin: 'auto' }}>
+            <h3 style={{ margin: '5rem auto' }}>Projects:</h3>
             <div>
-                {projects.map(({ title, url, repository, technologies, description }, index) => (
-                    <GlassContainer style={{display:'flex',flexDirection:'column'}} key={index}>
-                        <h4>{title}</h4>
-                        <span><img /></span>
-                        <div>
-                            <span>{repository}</span>
-                            <span>{url}</span>
-                            <p>Tecnologías:</p>
-                            <p>{technologies.map((el, index) => <span key={index}>{el}, </span>)}</p>
-                            <div>
-                                {description}
-                            </div>
-                        </div>
-                    </GlassContainer>
+                {projects.map(({ title, url, img, repository, technologies, description }, index) => (
+                    <ProjectCard title={title} url={url} img={img} repository={repository} technologies={technologies} description={description} key={index} />
                 ))}
             </div>
-        </div>
+        </ProjectsContainer>
     )
 }
 
