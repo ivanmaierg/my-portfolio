@@ -6,16 +6,17 @@ export default {
     },
     // Colors for layout
     colors: {
-        primary1: "hsl(204,23.8%,95.9%)",
-        background1: "#001220",
-        background2: "#742d71",
-        accent1: "#C62368",
-        accent2: "#FA7268",
-        lavander:"#E4D9FF",
-        white:"#FAFAFF",
-        gray300: "#e2e8f0",
-        gray500:"#a0aec0",
-        gray700: "#4a5568",
+        stroke:'black',
+        background1: "#0f0e17",
+        background2: "#2e2f3e",
+        primary: "#ff8906",
+        secondary: "#f25f4c",
+        tertiary:"#e53170",
+        white:"##fffffe",
+        buttonText:"#fffffe",
+        headLine: "#fffffe",
+        paragraph:"#a7a9be",
+        gray700: "#fffffe",
     },
     // Breakpoints for responsive design
     breakpoints: {

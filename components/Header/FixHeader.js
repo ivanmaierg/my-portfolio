@@ -5,7 +5,7 @@ import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/a
 
 const FixHeader = () => {
     return (
-        <FixHeaderContainer style={{ position: 'fixed', top: '0px', margin: 'auto', zIndex: '2' }}>
+        <FixHeaderContainer>
             <Container>
                 <Div1>
                     <Link href="/" style="margin:auto">
@@ -16,23 +16,23 @@ const FixHeader = () => {
                 </Div1>
                 <Div2>
                     <li>
-                            <NavLink href="#About">About</NavLink>
+                            <NavLink whileHover={{scale:1.2}} transition={{type:"spring",stiffness:250}} href="#About">About</NavLink>
                     </li>
                     <li>
-                            <NavLink>Projects</NavLink>
+                            <NavLink whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 250 }} >Projects</NavLink>
                     </li>
                     <li>
-                            <NavLink>Cv</NavLink>
+                            <NavLink whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 250 }} >Cv</NavLink>
                     </li>
                 </Div2>
                 <Div3>
-                    <SocialIcons href='https://github.com/Getsuga743' rel="noreferrer" target="_blank">
-                        <AiFillGithub size="2.5rem" />
+                    <SocialIcons whileHover={{ scale: 1.1, backgroundColor:'rgba(255, 255, 255,0.2)' }} transition={{ type: "tween", stiffness: 100 }} href='https://github.com/Getsuga743' rel="noreferrer" target="_blank">
+                        <AiFillGithub  size="2.5rem" />
                     </SocialIcons>
-                    <SocialIcons href='https://linkedin.com/in/ivan-maier-gallardo-461b70176' rel="noreferrer" target="_blank">
+                    <SocialIcons whileHover={{ scale: 1.1, backgroundColor: 'rgba(255, 255, 255,0.2)' }} href='https://linkedin.com/in/ivan-maier-gallardo-461b70176' rel="noreferrer" target="_blank">
                         <AiFillLinkedin size="2.5rem" />
                     </SocialIcons>
-                    <SocialIcons href='https://twitter.com/imaierg' rel="noreferrer" target="_blank">
+                    <SocialIcons whileHover={{ scale: 1.1, backgroundColor: 'rgba(255, 255, 255,0.2)' }} href='https://twitter.com/imaierg' rel="noreferrer" target="_blank">
                         <AiFillTwitterCircle size="2.5rem" />
                     </SocialIcons>
                 </Div3>
