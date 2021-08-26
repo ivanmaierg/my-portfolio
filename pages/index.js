@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import About from '../components/About/About'
 import CallToAction from '../components/CallToAction/CallToAction'
-import { educationInfo, Skills, projectsInfo } from '../data/data'
+import { educationInfo, Skills } from '../data/data'
 import { Layout } from '../layout/Layout'
+import { Container, Background } from '../layout/LayoutStyles'
 import { useInView } from 'react-intersection-observer';
-import Projects from '../components/Projects/Projects'
+// import Projects from '../components/Projects/Projects'
 
 
 export default function Home(props) {
@@ -17,16 +18,22 @@ export default function Home(props) {
     <>
       <Head>
         <title>ivanmaierg</title>
-        <meta name="description" content="This is my portfolio" />
+        <meta name="description" content="My portfolio" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
       </Head>
       <Layout>
-        <CallToAction />
-        <div ref={refAbout}>
-          {inViewAbout && <About education={props.educationData} skills={props.skills} />}
-        </div>
-        {/* <Projects projects={props.projects} /> */}
+        <Container>
+          <CallToAction />
+        </Container>
+        <Background url={'./stacked-waves-haikei.svg'} id='About'>
+          <Container ref={refAbout}>
+            {inViewAbout && <About education={props.educationData} skills={props.skills} />}
+          </Container>
+        </Background>
+        <Container>
+          {/* <Projects /> */}
+        </Container>
       </Layout>
     </>
   )
@@ -37,13 +44,12 @@ export default function Home(props) {
 export async function getStaticProps() {
   const educationData = educationInfo;
   const skills = Skills;
-  const projects = projectsInfo;
   if (!educationData) {
     return {
       notFound: true,
     }
   }
   return {
-    props: { educationData, skills, projects }, // will be passed to the page component as props
+    props: { educationData, skills }, // will be passed to the page component as props
   }
 }
