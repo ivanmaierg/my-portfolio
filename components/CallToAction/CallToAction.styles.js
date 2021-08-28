@@ -7,6 +7,7 @@ export const Container = styled.section`
     justify-content:space-between;
     min-Width:25rem;
     min-height:45rem;
+    margin-bottom:25rem;
     @media ${(props => props.theme.breakpoints.md)}{
         flex-direction:column;
         margin-bottom:5rem;

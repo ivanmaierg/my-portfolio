@@ -9,8 +9,7 @@ import Projects from '../components/Projects/Projects'
 
 export default function Home(props) {
   const { ref: refAbout, inView: inViewAbout } = useInView({
-    /* Optional options */
-    threshold: 1,
+    threshold: 0.5,
     triggerOnce: true,
   });
   return (
@@ -19,14 +18,13 @@ export default function Home(props) {
         <title>ivanmaierg</title>
         <meta name="description" content="This is my portfolio" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
       </Head>
       <Layout>
         <CallToAction />
-        <div ref={refAbout}>
+        <div style={{ display: 'flex' , height: 'auto' }} id='About' ref={refAbout}>
           {inViewAbout && <About education={props.educationData} skills={props.skills} />}
         </div>
-        {/* <Projects projects={props.projects} /> */}
+        <Projects projects={props.projects} />
       </Layout>
     </>
   )

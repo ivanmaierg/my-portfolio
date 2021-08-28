@@ -12,7 +12,7 @@ export default {
         primary: "#ff8906",
         secondary: "#f25f4c",
         tertiary:"#e53170",
-        white:"##fffffe",
+        white:"#fffffe",
         buttonText:"#fffffe",
         headLine: "#fffffe",
         paragraph:"#a7a9be",
