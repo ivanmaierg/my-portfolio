@@ -7,11 +7,13 @@ import { useInView } from 'react-intersection-observer';
 import Projects from '../components/Projects/Projects'
 
 
+
 export default function Home(props) {
   const { ref: refAbout, inView: inViewAbout } = useInView({
     threshold: 0.5,
     triggerOnce: true,
   });
+  console.log(props.repos[0])
   return (
     <>
       <Head>
@@ -21,7 +23,7 @@ export default function Home(props) {
       </Head>
       <Layout>
         <CallToAction />
-        <div style={{ display: 'flex' , height: 'auto' }} id='About' ref={refAbout}>
+        <div style={{ display: 'flex', height: 'auto' }} id='About' ref={refAbout}>
           {inViewAbout && <About education={props.educationData} skills={props.skills} />}
         </div>
         <Projects projects={props.projects} />
