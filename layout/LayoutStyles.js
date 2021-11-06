@@ -17,7 +17,6 @@ export const Background = styled.div`
     background-size:cover;
     height:100vh;
     width: 100%;
-
     @media ${(props) => (props.theme.breakpoints.md)}{
         background-size:cover;
         height:auto;

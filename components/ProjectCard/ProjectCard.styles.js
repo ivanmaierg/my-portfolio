@@ -5,12 +5,14 @@ import { GlassContainer } from "../../styles/GlobalComponents/GlassContainer.sty
 export const ProjectCardContainer = styled(GlassContainer)` 
     display:flex;
     flex-direction:column;
-    width:auto;
     padding:2rem 4rem;
     & h4 {
         font-size:2.5rem;
         margin-bottom:2rem;
     };
+    @media ${(props) => props.theme.breakpoints.sm}{
+        padding:2rem;
+    }
 `;
 
 export const ProjectCardDescription = styled.div`

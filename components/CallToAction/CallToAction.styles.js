@@ -82,4 +82,7 @@ export const Portrait = styled(motion.div)`
     height:300px;
     max-width:300px;
     min-width:180px;
+    @media ${(props => props.theme.breakpoints.sm)}{
+            margin:0 auto 0 0;
+    }
 `

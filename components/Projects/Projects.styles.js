@@ -9,17 +9,21 @@ export const ProjectsContainer = styled.div`
     justify-content:center;
     align-items:center;
     width:100%;
+    padding:0 10rem;
     height:auto;
     margin:auto;
     & h3 {
         font-size:5rem;
         margin-bottom:5rem;
     }
+    @media ${(props) => props.theme.breakpoints.sm}{
+        padding:0;
+    }
 `;
 
 export const ProjectsGrid = styled.div`
     display:grid;
-    gap: 5rem 3rem;
+    gap: 5rem;
     width:100%;
     grid-template-columns: repeat(2,minmax(250px,1fr));
     grid-template-rows:repeat(auto-fit,minmax(250px,1fr));
