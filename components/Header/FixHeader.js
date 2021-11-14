@@ -22,7 +22,7 @@ const FixHeader = () => {
                             <NavLink whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 250 }} >Projects</NavLink>
                     </li>
                     <li>
-                            <NavLink whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 250 }} >Cv</NavLink>
+                            <NavLink whileHover={{ scale: 1.2 }} href='/Ivan_Maier_Gallardo_Cv.pdf' transition={{ type: "spring", stiffness: 250 }} >Cv</NavLink>
                     </li>
                 </Div2>
                 <Div3>
