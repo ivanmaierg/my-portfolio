@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectCardContainer, ProjectCardDescription, ProjectImagePreview ,TechnologieSpan} from './ProjectCard.styles';
+import { ProjectCardContainer, ProjectCardDescription, ProjectImagePreview ,TechnologiesSpan} from './ProjectCard.styles';
 import Image from 'next/image';
 
 const ProjectCard = ({ title, url, img, repository, technologies, description, index }) => {
@@ -9,7 +9,7 @@ const ProjectCard = ({ title, url, img, repository, technologies, description, i
             <ProjectImagePreview src={img} responsive={!!true} height={200} width={350} />
             <ProjectCardDescription>
                 <p>Tecnologías :</p>
-                <ul>{technologies.map((el, index) => <TechnologieSpan key={index} index={index}><p>{el}</p></TechnologieSpan>)}</ul>
+                <ul>{technologies.map((el, index) => <TechnologiesSpan key={index} index={index}><p>{el}</p></TechnologiesSpan>)}</ul>
                 <p>
                     {description}
                 </p>

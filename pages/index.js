@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import About from '../components/About/About'
 import CallToAction from '../components/CallToAction/CallToAction'
-import { educationInfo, Skills } from '../data/data'
+import { Skills, ProjectsInfo } from '../data/data'
 import { Layout } from '../layout/Layout'
 import Projects from '../components/Projects/Projects'
 
@@ -20,7 +20,7 @@ export default function Home(props) {
       <Layout>
         <CallToAction />
         <div style={{ display: 'flex', height: 'auto' }} id="About">
-          <About education={props.educationData} skills={props.skills} />
+          <About  skills={props.skills} />
         </div>
         <div style={{ display: 'flex', height: 'auto' }} id="Projects">
           <Projects projects={props.projects} />
@@ -33,14 +33,9 @@ export default function Home(props) {
 
 
 export async function getStaticProps() {
-  const educationData = educationInfo;
   const skills = Skills;
-  if (!educationData) {
-    return {
-      notFound: true,
-    }
-  }
+  const projects = ProjectsInfo;
   return {
-    props: { educationData, skills }, // will be passed to the page component as props
+    props: { projects, skills }, // will be passed to the page component as props
   }
 }

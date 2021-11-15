@@ -59,7 +59,7 @@ export const Skills = [
         name: 'React',
         url: '',
     },
-    
+
     {
         id: 7,
         name: 'Node js',
@@ -98,20 +98,20 @@ export const Skills = [
     },
 ]
 
-export const projectsInfo = [
+export const ProjectsInfo = [
     {
         title: 'Cripto Barrani',
         url: 'https://crypto-barrani.vercel.app/',
-        img:'https://res.cloudinary.com/ds3tqgxy5/image/upload/v1636988356/projects/Captura_de_pantalla_de_2021-11-15_11-57-31_he1brm.png',
-        repository: 'https://github.com/Getsuga743/crypto-barrani',
-        technologies: ['Nextjs', 'Chakra-ui', 'Styled-components', 'Swr','React'],
+        img: 'https://res.cloudinary.com/ds3tqgxy5/image/upload/v1636988356/projects/Captura_de_pantalla_de_2021-11-15_11-57-31_he1brm.png',
+        repository: 'https://github.com/Getsuga743/Cr',
+        technologies: ['Nextjs', 'Chakra-ui', 'Styled-components', 'Swr', 'React'],
         description: "Aplicación web, hecha con Next.js , Un dashboard donde ver distintos datos sobre la economía argentina y criptomonedas",
     }, {
         title: 'React Journal',
         url: 'https://journal-react-app.vercel.app/',
         img: 'https://res.cloudinary.com/ds3tqgxy5/image/upload/v1636988587/projects/Captura_de_pantalla_de_2021-11-15_12-01-43_ydywxq.png',
         repository: 'https://github.com/Getsuga743/Journal-React-App',
-        technologies: ['React', 'Sass', 'Redux', 'Node','Firebase'],
+        technologies: ['React', 'Sass', 'Redux', 'Node', 'Firebase'],
         description: "Pequeña spa, un diario personal web, firebase como db.",
     }, {
         title: 'Easy landing Bank',

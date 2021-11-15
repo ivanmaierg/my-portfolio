@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 import { ProjectsContainer, ProjectsGrid } from './Projects.styles';
 import ProjectCard from '../ProjectCard/ProjectCard';
 
