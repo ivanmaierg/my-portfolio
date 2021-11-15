@@ -7,7 +7,7 @@ export const AboutContainer = styled.section`
     align-self:center;
     justify-self:center;
     grid-gap:4rem;
-    margin-bottom:25rem;
+    margin-bottom:10rem;
     @media ${(props) => props.theme.breakpoints.md}{
         flex-direction:column;
         justify-content:center;
@@ -69,20 +69,29 @@ export const List = styled.ul`
 `;
 
 
-export const ItemList = styled.li`
-    padding:0.5rem 1rem;
-    margin:0.5rem;
+
+export const Item = styled.li`
     text-align:start;
     width:fit-content;
-    line-height:3rem;
     & p{
         color:#FFFF;
-    } 
-    background-color:${(props) => { return props.id % 2 === 0 ? props.theme.colors.primary : props.theme.colors.secondary }};
+    }
+    background-color:${(props) => { return props.index % 2 === 0 ? props.theme.colors.primary : props.theme.colors.secondary }};
     @media ${(props) => props.theme.breakpoints.md}{
     & li > p {
-    text-align:start;
-    line-height:2rem;
+        text-align:start;
+    }}
+`
+
+
+export const ItemList = styled(Item)`
+    padding:0.5rem 1rem;
+    margin:0.5rem;
+    line-height:3rem;
+     @media ${(props) => props.theme.breakpoints.md}{
+    & li > p {
+        line-height:2rem;
+    }}
 }
 `;
 

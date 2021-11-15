@@ -22,7 +22,7 @@ const About = ({ skills }) => {
                         <List>
                             {skills.map(el => {
                                 return (
-                                    <ItemList key={el.id} id={el.id}>
+                                    <ItemList key={el.id} index={el.id}>
                                         {el.url !== '' ? <span><img src={el.url} /></span> : ''}
                                         <p>
                                             {el.name}

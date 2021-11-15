@@ -19,10 +19,10 @@ const FixHeader = () => {
                             <NavLink whileHover={{scale:1.2}} transition={{type:"spring",stiffness:250}} href="#About">About</NavLink>
                     </li>
                     <li>
-                            <NavLink whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 250 }} >Projects</NavLink>
+                            <NavLink whileHover={{ scale: 1.2 }} target="_blank"transition={{ type: "spring", stiffness: 250 }} href="#Projects" >Projects</NavLink>
                     </li>
                     <li>
-                            <NavLink whileHover={{ scale: 1.2 }} href='/Ivan_Maier_Gallardo_Cv.pdf' transition={{ type: "spring", stiffness: 250 }} >Cv</NavLink>
+                        <NavLink whileHover={{ scale: 1.2 }} target="_blank" href='/Ivan_Maier_Gallardo_Cv.pdf' transition={{ type: "spring", stiffness: 250 }} >Cv</NavLink>
                     </li>
                 </Div2>
                 <Div3>
