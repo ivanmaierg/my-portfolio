@@ -1,11 +1,10 @@
-import { AnimateSharedLayout } from 'framer-motion';
+
 import React from 'react'
 import { AboutContainer, Technologies, AboutMe, List, ItemList, InfoWrapper } from './About.styles';
 
 const About = ({ skills }) => {
     return (
         <AboutContainer>
-        <AnimateSharedLayout>
                 <InfoWrapper>
                     <AboutMe layout={true} initial={{ x: '-100vw', opacity: 0 }} animate={{ opacity: 1 , x: '0'}} transition={{ delay: 0.5, type: 'spring', stiffness: 50 }}>
                         <h3>Acerca de mí:</h3>
@@ -23,7 +22,7 @@ const About = ({ skills }) => {
                         <List>
                             {skills.map(el => {
                                 return (
-                                    <ItemList key={el.id} id={el.id}>
+                                    <ItemList key={el.id} index={el.id}>
                                         {el.url !== '' ? <span><img src={el.url} /></span> : ''}
                                         <p>
                                             {el.name}
@@ -34,11 +33,8 @@ const About = ({ skills }) => {
                         </List>
                     </Technologies>
                 </InfoWrapper>
-        </AnimateSharedLayout>
         </AboutContainer>
     )
 }
-
-
 
 export default About;

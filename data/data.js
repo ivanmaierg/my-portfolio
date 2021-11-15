@@ -55,15 +55,11 @@ export const Skills = [
         url: '',
     },
     {
-        id: 4,
-        name: 'Sass',
-        url: '',
-    },
-    {
         id: 6,
         name: 'React',
         url: '',
     },
+
     {
         id: 7,
         name: 'Node js',
@@ -79,6 +75,7 @@ export const Skills = [
         name: 'Webpack',
         url: '',
     },
+
     {
         id: 10,
         name: 'Typescript',
@@ -93,17 +90,29 @@ export const Skills = [
         id: 12,
         name: 'Git',
         url: ''
-    }
+    },
+    {
+        id: 14,
+        name: 'Next.js',
+        url: '',
+    },
 ]
 
-export const projectsInfo = [
+export const ProjectsInfo = [
     {
-        title: 'Easy landing Bank',
-        url: 'https://github.com/Getsuga743/Easybank-landing',
-        img:'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/yezt1f56cfp2njnakpbo.jpg',
-        repository: 'https://github.com/Getsuga743/Easybank-landing',
-        technologies: ['React', 'Sass', 'Redux', 'Node'],
-        description: "Reto de https://www.frontendmentor.io/challenges. Maquetado de una landing page para un banco, hecha con html, sass, y javascript. Diseño full responsive",
+        title: 'Cripto Barrani',
+        url: 'https://crypto-barrani.vercel.app/',
+        img: 'https://res.cloudinary.com/ds3tqgxy5/image/upload/v1636988356/projects/Captura_de_pantalla_de_2021-11-15_11-57-31_he1brm.png',
+        repository: 'https://github.com/Getsuga743/Cr',
+        technologies: ['Nextjs', 'Chakra-ui', 'Styled-components', 'Swr', 'React'],
+        description: "Aplicación web, hecha con Next.js , Un dashboard donde ver distintos datos sobre la economía argentina y criptomonedas",
+    }, {
+        title: 'React Journal',
+        url: 'https://journal-react-app.vercel.app/',
+        img: 'https://res.cloudinary.com/ds3tqgxy5/image/upload/v1636988587/projects/Captura_de_pantalla_de_2021-11-15_12-01-43_ydywxq.png',
+        repository: 'https://github.com/Getsuga743/Journal-React-App',
+        technologies: ['React', 'Sass', 'Redux', 'Node', 'Firebase'],
+        description: "Pequeña spa, un diario personal web, firebase como db.",
     }, {
         title: 'Easy landing Bank',
         url: 'https://github.com/Getsuga743/Easybank-landing',
@@ -112,17 +121,10 @@ export const projectsInfo = [
         technologies: ['React', 'Sass', 'Redux', 'Node'],
         description: "Reto de https://www.frontendmentor.io/challenges. Maquetado de una landing page para un banco, hecha con html, sass, y javascript. Diseño full responsive",
     }, {
-        title: 'Easy landing Bank',
-        url: 'https://github.com/Getsuga743/Easybank-landing',
-        img: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/yezt1f56cfp2njnakpbo.jpg',
-        repository: 'https://github.com/Getsuga743/Easybank-landing',
-        technologies: ['React', 'Sass', 'Redux', 'Node'],
-        description: "Reto de https://www.frontendmentor.io/challenges. Maquetado de una landing page para un banco, hecha con html, sass, y javascript. Diseño full responsive",
-    }, {
-        title: 'Easy landing Bank',
-        url: 'https://github.com/Getsuga743/Easybank-landing',
-        img: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/yezt1f56cfp2njnakpbo.jpg',
-        repository: 'https://github.com/Getsuga743/Easybank-landing',
+        title: 'BuenaBit',
+        url: 'https://getsuga743.github.io/BuenaBit/',
+        img: 'https://res.cloudinary.com/ds3tqgxy5/image/upload/v1636988718/projects/Captura_de_pantalla_de_2021-11-15_12-04-00_hkr7dr.png',
+        repository: 'https://github.com/Getsuga743/BuenaBit',
         technologies: ['React', 'Sass', 'Redux', 'Node'],
         description: "Reto de https://www.frontendmentor.io/challenges. Maquetado de una landing page para un banco, hecha con html, sass, y javascript. Diseño full responsive",
     },

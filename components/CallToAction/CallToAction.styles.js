@@ -7,6 +7,7 @@ export const Container = styled.section`
     justify-content:space-between;
     min-Width:25rem;
     min-height:45rem;
+    margin-bottom:25rem;
     @media ${(props => props.theme.breakpoints.md)}{
         flex-direction:column;
         margin-bottom:5rem;
@@ -81,4 +82,7 @@ export const Portrait = styled(motion.div)`
     height:300px;
     max-width:300px;
     min-width:180px;
+    @media ${(props => props.theme.breakpoints.sm)}{
+            margin:0 auto 0 0;
+    }
 `

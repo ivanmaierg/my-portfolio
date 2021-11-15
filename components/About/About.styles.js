@@ -4,9 +4,10 @@ import { GlassContainer } from '../../styles/GlobalComponents/GlassContainer.sty
 export const AboutContainer = styled.section`  
     display:flex;
     flex-wrap:wrap;
-    justify-content:center;
-    align-items:flex-start;
+    align-self:center;
+    justify-self:center;
     grid-gap:4rem;
+    margin-bottom:10rem;
     @media ${(props) => props.theme.breakpoints.md}{
         flex-direction:column;
         justify-content:center;
@@ -38,8 +39,9 @@ export const GlassCardContainer = styled(GlassContainer)`
     & p > strong {
         color:${(props) => props.theme.colors.headLine};
     }
-    &
-    }
+
+
+
     @media ${(props) => props.theme.breakpoints.md}{
         padding:3rem 2rem;
         & h3 {
@@ -52,13 +54,9 @@ export const GlassCardContainer = styled(GlassContainer)`
             color:${(props) => props.theme.colors.paragraph};
             line-height:3.5rem;
         }
-    
     }
 `;
 
-<ul className='List#asdasd2136'>
-    
-</ul>
 
 export const List = styled.ul` 
         display:flex;
@@ -69,20 +67,31 @@ export const List = styled.ul`
         color:${(props) => props.theme.colors.headLine};
     }
 `;
-export const ItemList = styled.li`
-    padding:0.5rem 1rem;
-    margin:0.5rem;
+
+
+
+export const Item = styled.li`
     text-align:start;
     width:fit-content;
-    line-height:3rem;
     & p{
         color:#FFFF;
-    } 
-    background-color:${(props) => { return props.id % 2 === 0 ? props.theme.colors.primary : props.theme.colors.secondary }};
+    }
+    background-color:${(props) => { return props.index % 2 === 0 ? props.theme.colors.primary : props.theme.colors.secondary }};
     @media ${(props) => props.theme.breakpoints.md}{
     & li > p {
-    text-align:start;
-    line-height:2rem;
+        text-align:start;
+    }}
+`
+
+
+export const ItemList = styled(Item)`
+    padding:0.5rem 1rem;
+    margin:0.5rem;
+    line-height:3rem;
+     @media ${(props) => props.theme.breakpoints.md}{
+    & li > p {
+        line-height:2rem;
+    }}
 }
 `;
 
@@ -95,7 +104,6 @@ export const AboutMe = styled(GlassCardContainer)`
     height:100%;
     width:100%;
 `
-
 
 export const Education = styled(GlassCardContainer)` 
     display: flex;
@@ -119,9 +127,8 @@ export const Technologies = styled(GlassCardContainer)`
 `
 
 
-
 export const InfoWrapper = styled.div`
     display: flex;
     flex-direction:column;
-    gap:2rem;
+    gap:3rem;
 `;
