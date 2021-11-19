@@ -5,6 +5,7 @@ export const Container = styled.div`
     width:100%;
     margin:auto;
     padding:0 2rem;
+    min-height:100vh;
 `
 
 export const Background = styled.div`
