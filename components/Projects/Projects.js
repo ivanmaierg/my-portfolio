@@ -33,7 +33,6 @@ const Projects = ({ projects }) => {
         hidden: { opacity: 0,scale:0 },
     }
 
-    console.log(hasBeenViewed)
     return (
         <ProjectsContainer ref={ref} initial='hidden' animate={hasBeenViewed ? 'visible' : 'hidden'} variants={containerVariants}>
             <motion.h3>Proyectos</motion.h3>
