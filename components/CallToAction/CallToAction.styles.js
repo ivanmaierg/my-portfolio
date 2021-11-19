@@ -44,6 +44,9 @@ export const InfoContainer = styled(motion.div)`
             color:${(props) => props.theme.colors.headLine};
             }
             margin-bottom:2rem;
+            text-align:justify;
+            overflow-wrap: break-word;
+            hyphens:auto;
         }
         @media ${(props => props.theme.breakpoints.md)}{
             height:auto;

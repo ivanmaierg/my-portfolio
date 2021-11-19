@@ -31,11 +31,12 @@ export const GlassCardContainer = styled(GlassContainer)`
     }
     & p {
         text-align:justify;
-        word-break: break-all;
+        overflow-wrap: break-word; 
         font-size:2rem;
         font-family:${(props) => props.theme.fonts.main};
         color:${(props) => props.theme.colors.paragraph};
         line-height:3.5rem;
+        hyphens: auto;
     }
     & p > strong {
         color:${(props) => props.theme.colors.headLine};
