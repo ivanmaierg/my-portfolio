@@ -22,28 +22,28 @@ export const WavesContainer = styled(motion.div)`
     @media ${(props) => props.theme.breakpoints.sm}{
         background:url('/wave-sm.svg');
         background-position-y:-130px;
-        height:5rem;
+        height:13rem;
     }
 `;
 
 export const FixHeaderContainer = styled(motion.div)`
+    display:flex;
     opacity:1;
     position:fixed;
-    top:0px;
+    top:5px;
     margin:auto;
     z-index:2;
     display: flex;
     width:100%;
     align-items: flex-start;
     justify-content:center;
-    background-color:${(props)=> props.theme.colors.primary};
     height:auto;
     transition:all 350ms;
     margin:auto;
     @media ${(props) => props.theme.breakpoints.xl}{
         transition:all 220ms;
         height:10rem;
-        background-color:${(props) => props.theme.colors.primary};
+        position:none;
     }
 `
 
