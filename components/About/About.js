@@ -14,7 +14,7 @@ const About = ({ skills }) => {
                         <p>
                             Tengo mucho interés en la plataforma web, la creación de interfaces de usuario, y el ecosistema javascript. <br></br>
                             Cuento con conocimientos de <strong>React.js, y Next.js</strong>. También tengo nociones programación backend con <strong>Node.js y Express</strong>.
-                            Mis objetivos son seguir mejorando como desarrollador, buscando nuevos desafios y responsabilidades que asumir.
+                            Mis objetivos son seguir mejorando como desarrollador, buscando nuevos desafíos y responsabilidades que asumir.
                         </p>
                     </AboutMe>
                     <Technologies layout={true} initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1, type: 'spring', stiffness: 50 }}>

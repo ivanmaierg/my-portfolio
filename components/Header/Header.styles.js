@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const WavesContainer = styled.div`
+export const WavesContainer = styled(motion.div)`
+    opacity:1;
     width:100%;
     display: flex;
     align-items: flex-start;
@@ -21,12 +22,12 @@ export const WavesContainer = styled.div`
     @media ${(props) => props.theme.breakpoints.sm}{
         background:url('/wave-sm.svg');
         background-position-y:-130px;
-        height:13rem;
-        transition: all  300ms;
+        height:5rem;
     }
 `;
 
-export const FixHeaderContainer = styled.div`
+export const FixHeaderContainer = styled(motion.div)`
+    opacity:1;
     position:fixed;
     top:0px;
     margin:auto;
@@ -75,12 +76,21 @@ export const Div1 = styled.div`
 export const Div2 = styled.nav`
     grid-area: 1 / 2 / 2 / 6;
     display: flex;
-    justify-content:space-around;
-    align-items: center;
-    li{
-        list-style: none;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    > ul{
+        width:100%;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        flex-direction:row;
     }
-    li:nth-child(3) {
+    > ul > li{
+        list-style: none;
+        text-align: underline;
+    }
+    > ul > li:nth-child(3) {
         margin-right:1rem;
     }
     @media ${(props) => props.theme.breakpoints.sm} {
@@ -112,7 +122,8 @@ export const NavLink = styled(motion.a)`
     cursor: pointer;
     color:${(props => props.theme.colors.headLine)};
     @media ${(props => props.theme.breakpoints.sm)} {
-        font-size:1.8rem;
+        font-size:1.5rem;
+        word-wrap:all;
     }
 `
 export const SocialIcons = styled(motion.a)`

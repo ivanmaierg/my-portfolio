@@ -31,6 +31,7 @@ export const GlassCardContainer = styled(GlassContainer)`
     }
     & p {
         text-align:justify;
+        word-break: break-all;
         font-size:2rem;
         font-family:${(props) => props.theme.fonts.main};
         color:${(props) => props.theme.colors.paragraph};
@@ -123,7 +124,6 @@ export const Education = styled(GlassCardContainer)`
 export const Technologies = styled(GlassCardContainer)` 
     flex:1;
     width:auto;
-    min-height:10rem;
 `
 
 

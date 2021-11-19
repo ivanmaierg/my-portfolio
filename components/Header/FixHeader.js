@@ -3,9 +3,13 @@ import { Container, Div1, Div2, Div3, NavLink, SocialIcons, FixHeaderContainer }
 import Link from 'next/link';
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
 
-const FixHeader = () => {
+const FixHeader = ({variants}) => {
     return (
-        <FixHeaderContainer>
+        <FixHeaderContainer transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 100 },
+            default: { duration: 1 },
+        }} variants={variants}>
             <Container>
                 <Div1>
                     <Link href="/" style="margin:auto">
@@ -15,15 +19,18 @@ const FixHeader = () => {
                     </Link>
                 </Div1>
                 <Div2>
-                    <li>
-                            <NavLink whileHover={{scale:1.2}} transition={{type:"spring",stiffness:250}} href="#About">About</NavLink>
-                    </li>
-                    <li>
-                            <NavLink whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 250 }} href="#Projects" >Projects</NavLink>
-                    </li>
-                    <li>
-                        <NavLink whileHover={{ scale: 1.2 }} target="_blank" href='/Ivan_Maier_Gallardo_Cv.pdf' transition={{ type: "spring", stiffness: 250 }} >Cv</NavLink>
-                    </li>
+                <ul>
+                        <li>
+                            <NavLink whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 250 }} href="#About">Conoceme</NavLink>
+                        </li>
+                        <li>
+                            <NavLink whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 250 }} href="#Projects" >Proyectos</NavLink>
+                        </li>
+                        <li>
+                            <NavLink whileHover={{ scale: 1.2 }} target="_blank" href='/Ivan_Maier_Gallardo_Cv.pdf' transition={{ type: "spring", stiffness: 250 }} >Cv</NavLink>
+                        </li>
+                </ul>
+                   
                 </Div2>
                 <Div3>
                     <SocialIcons whileHover={{ scale: 1.1, backgroundColor:'rgba(255, 255, 255,0.2)' }} transition={{ type: "tween", stiffness: 100 }} href='https://github.com/Getsuga743' rel="noreferrer" target="_blank">
