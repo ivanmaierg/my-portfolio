@@ -3,12 +3,14 @@ import { ProjectCardContainer,ProjectLink, ProjectCardContent, ProjectCardDescri
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-const ProjectCard = ({ title, url, img, repository, technologies, description, index }) => {
+
+
+const ProjectCard = ({ title, url, img, repository, technologies, description, index,variants,custom,animations }) => {
     return (
-        <ProjectCardContainer key={index} >
+        <ProjectCardContainer  animations={animations} variants={variants} custom={custom} key={index} >
         <ProjectCardContent>
                 <h4>{title}</h4>
-                <ProjectImagePreview src={img} responsive="true" height={200} width={350} />
+                <ProjectImagePreview src={img} quality='50' responsive="true" height={200} width={350} />
                 <ProjectCardDescription>
                     <p>Tecnologías :</p>
                     <ul>{technologies.map((el, index) => <TechnologiesSpan key={index} index={index}><p>{el}</p></TechnologiesSpan>)}</ul>
@@ -30,7 +32,6 @@ const ProjectCard = ({ title, url, img, repository, technologies, description, i
                 </ProjectLink>
                 
         </ProjectCardContent>
-           
         </ProjectCardContainer>
     )
 };
