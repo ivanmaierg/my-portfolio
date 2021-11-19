@@ -31,6 +31,7 @@ export const GlassCardContainer = styled(GlassContainer)`
     }
     & p {
         text-align:justify;
+        word-break: break-all;
         font-size:2rem;
         font-family:${(props) => props.theme.fonts.main};
         color:${(props) => props.theme.colors.paragraph};
