@@ -3,9 +3,13 @@ import { Container, Div1, Div2, Div3, NavLink, SocialIcons, FixHeaderContainer }
 import Link from 'next/link';
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
 
-const FixHeader = () => {
+const FixHeader = ({variants}) => {
     return (
-        <FixHeaderContainer>
+        <FixHeaderContainer transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 100 },
+            default: { duration: 1 },
+        }} variants={variants}>
             <Container>
                 <Div1>
                     <Link href="/" style="margin:auto">

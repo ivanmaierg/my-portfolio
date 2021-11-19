@@ -17,12 +17,23 @@ export const ProjectCardContainer = styled(GlassContainer)`
     }
 `;
 
+export const ProjectCardContent = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+`
+
 export const ProjectCardDescription = styled.div`
     height:50%;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
     color:white;
+    min-height:10rem;
     & p {
         padding:2rem 0;
         text-overflow:ellipsis;
@@ -40,15 +51,6 @@ export const ProjectCardDescription = styled.div`
         flex-direction:row;
         flex-wrap:wrap;
 
-    }
-    & div {
-        display:flex;
-        align-self:flex-end;
-        justify-content:flex-end;
-        align-items:center;
-        & span:first-child {
-            margin-right:1rem;
-        }
     }
 
 `
@@ -74,3 +76,11 @@ export const ProjectImagePreview = styled(Image)`
     height:50%;
     object-fit:cover;
 `;
+export const ProjectLink = styled.div`
+    display:flex;
+    justify-content:end;
+    > a:first-child{
+        margin-right:1rem;
+    }
+
+`

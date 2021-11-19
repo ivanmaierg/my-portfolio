@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const WavesContainer = styled.div`
+export const WavesContainer = styled(motion.div)`
+    opacity:1;
     width:100%;
     display: flex;
     align-items: flex-start;
@@ -26,7 +27,8 @@ export const WavesContainer = styled.div`
     }
 `;
 
-export const FixHeaderContainer = styled.div`
+export const FixHeaderContainer = styled(motion.div)`
+    opacity:1;
     position:fixed;
     top:0px;
     margin:auto;

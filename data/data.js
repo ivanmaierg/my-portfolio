@@ -118,14 +118,14 @@ export const ProjectsInfo = [
         url: 'https://github.com/Getsuga743/Easybank-landing',
         img: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/yezt1f56cfp2njnakpbo.jpg',
         repository: 'https://github.com/Getsuga743/Easybank-landing',
-        technologies: ['React', 'Sass', 'Redux', 'Node'],
+        technologies: ['JS', 'Sass', 'HTML5'],
         description: "Reto de https://www.frontendmentor.io/challenges. Maquetado de una landing page para un banco, hecha con html, sass, y javascript. Diseño full responsive",
     }, {
         title: 'BuenaBit',
         url: 'https://getsuga743.github.io/BuenaBit/',
         img: 'https://res.cloudinary.com/ds3tqgxy5/image/upload/v1636988718/projects/Captura_de_pantalla_de_2021-11-15_12-04-00_hkr7dr.png',
         repository: 'https://github.com/Getsuga743/BuenaBit',
-        technologies: ['React', 'Sass', 'Redux', 'Node'],
+        technologies: ['Html','Css', 'Js'],
         description: "Reto de https://www.frontendmentor.io/challenges. Maquetado de una landing page para un banco, hecha con html, sass, y javascript. Diseño full responsive",
     },
 ]
