@@ -124,7 +124,6 @@ export const Education = styled(GlassCardContainer)`
 export const Technologies = styled(GlassCardContainer)` 
     flex:1;
     width:auto;
-    min-height:10rem;
 `
 
 

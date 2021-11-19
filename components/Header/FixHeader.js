@@ -19,15 +19,18 @@ const FixHeader = ({variants}) => {
                     </Link>
                 </Div1>
                 <Div2>
-                    <li>
-                            <NavLink whileHover={{scale:1.2}} transition={{type:"spring",stiffness:250}} href="#About">About</NavLink>
-                    </li>
-                    <li>
-                            <NavLink whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 250 }} href="#Projects" >Projects</NavLink>
-                    </li>
-                    <li>
-                        <NavLink whileHover={{ scale: 1.2 }} target="_blank" href='/Ivan_Maier_Gallardo_Cv.pdf' transition={{ type: "spring", stiffness: 250 }} >Cv</NavLink>
-                    </li>
+                <ul>
+                        <li>
+                            <NavLink whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 250 }} href="#About">Conoceme</NavLink>
+                        </li>
+                        <li>
+                            <NavLink whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 250 }} href="#Projects" >Proyectos</NavLink>
+                        </li>
+                        <li>
+                            <NavLink whileHover={{ scale: 1.2 }} target="_blank" href='/Ivan_Maier_Gallardo_Cv.pdf' transition={{ type: "spring", stiffness: 250 }} >Cv</NavLink>
+                        </li>
+                </ul>
+                   
                 </Div2>
                 <Div3>
                     <SocialIcons whileHover={{ scale: 1.1, backgroundColor:'rgba(255, 255, 255,0.2)' }} transition={{ type: "tween", stiffness: 100 }} href='https://github.com/Getsuga743' rel="noreferrer" target="_blank">

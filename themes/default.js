@@ -14,7 +14,7 @@ export default {
         tertiary:"#e53170",
         white:"#fffffe",
         buttonText:"#fffffe",
-        headLine: "#fffffe",
+        headLine: "#ffffff",
         paragraph:"#a7a9be",
         gray700: "#fffffe",
     },

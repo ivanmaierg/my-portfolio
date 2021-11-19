@@ -126,6 +126,6 @@ export const ProjectsInfo = [
         img: 'https://res.cloudinary.com/ds3tqgxy5/image/upload/v1636988718/projects/Captura_de_pantalla_de_2021-11-15_12-04-00_hkr7dr.png',
         repository: 'https://github.com/Getsuga743/BuenaBit',
         technologies: ['Html','Css', 'Js'],
-        description: "Reto de https://www.frontendmentor.io/challenges. Maquetado de una landing page para un banco, hecha con html, sass, y javascript. Diseño full responsive",
+        description: "Maquetado de una landing para un proyecto de criptomonedas, diseño full responsive, and mobile first",
     },
 ]
