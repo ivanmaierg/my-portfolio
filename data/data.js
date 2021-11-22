@@ -103,7 +103,7 @@ export const ProjectsInfo = [
         title: 'Cripto Barrani',
         url: 'https://crypto-barrani.vercel.app/',
         img: 'https://res.cloudinary.com/ds3tqgxy5/image/upload/v1636988356/projects/Captura_de_pantalla_de_2021-11-15_11-57-31_he1brm.png',
-        repository: 'https://github.com/Getsuga743/Cr',
+        repository: 'https://github.com/Getsuga743/crypto-barrani',
         technologies: ['Nextjs', 'Chakra-ui', 'Styled-components', 'Swr', 'React'],
         description: "Aplicación web, hecha con Next.js , Un dashboard donde ver distintos datos sobre la economía argentina y criptomonedas",
     }, {
