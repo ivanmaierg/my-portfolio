@@ -11,13 +11,11 @@ const ProjectCard = ({ title, url, img, repository, technologies, description, i
         <ProjectCardContainer  animations={animations} variants={variants} custom={custom} key={index} >
         <ProjectCardContent>
                 <h4>{title}</h4>
-                <ProjectImagePreview src={img} quality='50' priority responsive="true" height={200} width={350} />
+                <ProjectImagePreview src={img} alt={title} quality='50' priority responsive="true" height={200} width={350} />
                 <ProjectCardDescription>
                     <p>Tecnologías :</p>
                     <ul>{technologies.map((el, index) => <TechnologiesSpan key={index} index={index}><p>{el}</p></TechnologiesSpan>)}</ul>
-                    <p>
-                        {description}
-                    </p>
+                    <p dangerouslySetInnerHTML={{__html:description}} />
                 </ProjectCardDescription>
                 <ProjectLink>
                     <motion.a href={repository} whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 250 }} target='_blank' rel="noreferrer">
