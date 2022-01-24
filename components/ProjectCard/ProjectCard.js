@@ -15,9 +15,7 @@ const ProjectCard = ({ title, url, img, repository, technologies, description, i
                 <ProjectCardDescription>
                     <p>Tecnologías :</p>
                     <ul>{technologies.map((el, index) => <TechnologiesSpan key={index} index={index}><p>{el}</p></TechnologiesSpan>)}</ul>
-                    <p>
-                        {description}
-                    </p>
+                    <p dangerouslySetInnerHTML={{__html:description}} />
                 </ProjectCardDescription>
                 <ProjectLink>
                     <motion.a href={repository} whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 250 }} target='_blank' rel="noreferrer">

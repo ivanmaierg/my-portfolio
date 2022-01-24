@@ -100,6 +100,14 @@ export const Skills = [
 
 export const ProjectsInfo = [
     {
+        title:'Adviency',
+        url:'https://adviency-krwfrekr4-getsuga743.vercel.app/',
+        img:'https://res.cloudinary.com/ds3tqgxy5/image/upload/c_fit,h_480,w_768/v1642992733/projects/adviency-krwfrekr4-getsuga743.vercel.app__tsgon8.png',
+        repository:'https://github.com/Getsuga743/Adviency',
+        technologies:['React','Typescript','Css'],
+        description:'Pequeña spa producto de un challenge de <a href="https://twitter.com/goncy">@goncy.tsx</a>',
+    },
+    {
         title: 'Cripto Barrani',
         url: 'https://crypto-barrani.vercel.app/',
         img: 'https://res.cloudinary.com/ds3tqgxy5/image/upload/c_fit,h_480,w_768/v1636988356/projects/Captura_de_pantalla_de_2021-11-15_11-57-31_he1brm.png',
@@ -115,17 +123,17 @@ export const ProjectsInfo = [
         description: "Pequeña spa, un diario personal web, firebase como db.",
     }, {
         title: 'Easy landing Bank',
-        url: 'https://github.com/Getsuga743/Easybank-landing',
+        url: 'https://getsuga743.github.io/Easybank-landing/',
         img: 'https://res.cloudinary.com/dz209s6jk/image/upload/c_fit,h_480,w_768/q_auto:good,w_900/Challenges/yezt1f56cfp2njnakpbo.jpg',
         repository: 'https://github.com/Getsuga743/Easybank-landing',
         technologies: ['JS', 'Sass', 'HTML5'],
-        description: "Reto de https://www.frontendmentor.io/challenges. Maquetado de una landing page para un banco, hecha con html, sass, y javascript. Diseño full responsive.",
+        description: 'Reto de <a href="https://www.frontendmentor.io/challenges">https://www.frontendmentor.io/challenges</a>. Maquetado de una landing page para un banco, hecha con html, sass, y javascript. Diseño full responsive.',
     }, {
         title: 'BuenaBit',
         url: 'https://getsuga743.github.io/BuenaBit/',
         img: 'https://res.cloudinary.com/ds3tqgxy5/image/upload/c_fit,h_480,w_768/v1636988718/projects/Captura_de_pantalla_de_2021-11-15_12-04-00_hkr7dr.png',
         repository: 'https://github.com/Getsuga743/BuenaBit',
         technologies: ['Html','Css', 'Js'],
-        description: "Maquetado de una landing para un proyecto de criptomonedas, diseño full responsive, and mobile first.",
+        description: "Maquetado de una landing para un proyecto de criptomonedas, diseño full responsive, y mobile first.",
     },
 ]
