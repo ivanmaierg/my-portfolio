@@ -24,7 +24,7 @@ const FixHeader = ({ variants }) => {
                             <NavLink whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 250 }} href="#Projects" >Proyectos</NavLink>
                         </li>
                         <li>
-                            <NavLink whileHover={{ scale: 1.2 }} target="_blank" href='https://ivanmaierg.notion.site/Ivan-Maier-Gallardo-Frontend-developer-2ab2cb9a58454e65874a452ee9579f94' transition={{ type: "spring", stiffness: 250 }} >Cv</NavLink>
+                            <NavLink whileHover={{ scale: 1.2 }} target="_blank" href='https://www.notion.so/ivanmaierg/Ivan-Maier-Gallardo-Frontend-developer-2ab2cb9a58454e65874a452ee9579f94' transition={{ type: "spring", stiffness: 250 }} >Cv</NavLink>
                         </li>
                     </ul>
 
